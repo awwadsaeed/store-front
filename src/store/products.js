@@ -20,6 +20,23 @@ export default function getItems(state = initialState, action) {
                 products: state.products,
                 activeProducts: modified
             }
+        case 'DECREASE_INVENTORY':
+            console.log('called from decrease inventory');
+            const afterAdd = state.products.map((element)=>{
+                if(element.name == payload.name&&element.inventoryCount>0){
+                    element.inventoryCount=element.inventoryCount-1;
+                }
+                if(element.inventoryCount===0){
+                    element.description='out of stock'
+                }
+                return element;
+            });
+            console.log('called in products');
+            return {
+                products:afterAdd,
+                activeProducts:state.activeProducts
+            }
+
         default:
             return state;
     }
@@ -31,5 +48,11 @@ export function getCategoryItems(name) {
     return {
         type: 'CHANGE_ACTIVE',
         payload: name
+    }
+}
+export function reduceInventory(product){
+    return{
+        type:'DECREASE_INVENTORY',
+        payload:product
     }
 }
