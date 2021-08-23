@@ -52,9 +52,9 @@ function Products(props) {
                         <Button size="small" color="primary" onClick={()=>{handleClick(element)}}>
                             Add To Cart
                         </Button>
-                        <Button size="small" color="primary">
+                        {/* <Button size="small" color="primary">
                             View Details
-                        </Button>
+                        </Button> */}
                     </CardActions>
                 </Card>
 

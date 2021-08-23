@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { changeActive } from '../store/categories';
 import { getCategoryItems } from '../store/products';
@@ -19,6 +20,11 @@ function Categories(props) {
     const handleChange = (event, newValue) => {
       setValue(newValue);
     };
+
+    useEffect(()=>{
+        props.changeActive("electronics");
+    },[])
+    
     return (<>
         <Paper className={classes.root}>
             <Tabs                
