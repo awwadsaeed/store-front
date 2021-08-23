@@ -14,9 +14,9 @@ function App() {
     <div>
       <Header show={handleShow}/>
       <Categories/>
-      {showCartList&&<Cart />}
+      {showCartList&&<Cart  />}
       <Products/>
-      <Footer/>
+      <Footer />
     </div>
   )
 }

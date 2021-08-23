@@ -45,7 +45,7 @@ function Cart(props) {
             return list;
     }
     return (
-        <div className={classes.root}>
+        <div style={{position:'absolute',right:'0',top:'113px',width:'300px'}} className={classes.root}>
             <List component="nav" aria-label="secondary mailbox folders">
                 {handleList()}
             </List>
