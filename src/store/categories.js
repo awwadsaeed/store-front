@@ -1,5 +1,5 @@
 const initialState ={
-    categories:[{name:'electronics',description:'varies from PCs to laptops'},{name:'console',description:'mostly fruits and vegetables'}],
+    categories:[{name:'electronics',description:'varies from PCs to laptops'},{name:'food',description:'mostly fruits and vegetables'}],
     activeCategory:{name:'electronics',description:'varies from PCs to laptops'},
 }
 /*{
