@@ -1,5 +1,5 @@
 const initialState ={
-    categories:[{name:'electronics',description:'varies from PCs to laptops'},{name:'food',description:'mostly fruits and vegetables'}],
+    categories:[{name:'electronics',description:'varies from PCs to laptops'},{name:'console',description:'mostly fruits and vegetables'}],
     activeCategory:{name:'electronics',description:'varies from PCs to laptops'},
 }
 /*{
@@ -12,7 +12,6 @@ export default function categoriesReducer(state=initialState,action){
     switch(type){
         case 'CHANGE_ACTIVE':
             let modified={};
-            console.log('called');
             state.categories.forEach(item=>{
                 if(item.name === payload){
                     modified=item;
