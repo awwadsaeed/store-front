@@ -35,7 +35,7 @@ function Products(props) {
                     <CardMedia
                         style={{ height: '200px' }}
                         className={classes.media}
-                        image={element.image}
+                        image={`https://source.unsplash.com/random?${element.name}`}
                         title="Contemplative Reptile"
                     />
                     <CardActionArea>
@@ -44,7 +44,10 @@ function Products(props) {
                                 {element.name}
                             </Typography>
                             <Typography variant="body2" color="textSecondary" component="p">
-                                {element.description}
+                                price: {element.price}JD
+                            </Typography>
+                            <Typography variant="body2" color="textSecondary" component="p">
+                                in stock: {element.inStock}
                             </Typography>
                         </CardContent>
                     </CardActionArea>
